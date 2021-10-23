@@ -4,19 +4,17 @@ import az.springframework.springwebfluxrest.domain.Category;
 import az.springframework.springwebfluxrest.domain.Vendor;
 import az.springframework.springwebfluxrest.repository.CategoryRepository;
 import az.springframework.springwebfluxrest.repository.VendorRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class Bootstrap implements CommandLineRunner {
 
     private final CategoryRepository categoryRepository;
     private final VendorRepository vendorRepository;
 
-    public Bootstrap(CategoryRepository categoryRepository, VendorRepository vendorRepository) {
-        this.categoryRepository = categoryRepository;
-        this.vendorRepository = vendorRepository;
-    }
 
     @Override
     public void run(String... args) throws Exception {
